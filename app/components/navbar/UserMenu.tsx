@@ -42,14 +42,27 @@ const UserMenu = () => {
             </div>
           </DropdownTrigger>
           <DropdownMenu aria-label="User Actions" className="flex flex-col">
-            <DropdownItem key="login" onClick={() => handleButtonClick('login')}>
+            <DropdownItem
+              key="login"
+              onClick={() => handleButtonClick("login")}
+            >
               Login
             </DropdownItem>
-            <DropdownItem key="signup" onClick={() => handleButtonClick('signup')}>Signup</DropdownItem>
+            <DropdownItem
+              key="signup"
+              onClick={() => handleButtonClick("signup")}
+            >
+              Signup
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </div>
-      <AuthModal isOpen={isOpen} onOpenChange={onOpenChange} modalType={modalType} />
+      <AuthModal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        modalType={modalType}
+        setModalType={setModalType}
+      />
     </div>
   );
 };
